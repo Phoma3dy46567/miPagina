@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Estilos de la barra de navegación */
+
+      .navbar {
+        background-image: linear-gradient(to right, #369aeb, #042d64, #02042a);
+        color: #ffffff;
+        padding: 10px 0;
+      }
+
+      .navbar .logo img {
+        border-radius: 25px;
+        height: 70px;
+        margin-left: 20%;
+        vertical-align: middle;
+      }
+      .navbar-toggler {
+        background-color: #31b4f650;
+        border: none;
+        padding: 10px 20px;
+        height: 40px;
+        width: 40px;
+        font-size: 12px;
+        cursor: pointer;
+        margin-right: 5%;
+      }
+      .navbar-toggler-icon {
+        font-size: 24px;
+        color: #f8f3f3;
+      }
+      .navbar-nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        margin-left: 80%;
+        margin-right: 4%;
+      }
+
+      .navbar-nav li {
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .navbar-nav li a {
+        color: #a40e0e;
+        transition: transform 0.3s ease;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+      }
+      #ini {
+        background-color: #ff6600a9;
+        border-radius: 10px;
+        color: #fff;
+      }
+      .navbar-nav li a:hover {
+        background-color: #71d5d3a9;
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
+
+      /* Estilos del encabezado */
+
+      .header {
+        background-image: url("media/fondoCel3.webp");
+        background-size: cover;
+        color: #a40e0e;
+        text-align: center;
+        height: 500px;
+        padding: 100px 0;
+      }
+
+      .header h1 {
+        font-size: 3em;
+      }
+
+      .header p {
+        font-size: 1.2em;
+        color: #fff;
+      }
+
+      .header .btn {
+        display: inline-block;
+        background-color: #ff6600;
+        color: #fff;
+        font-size: 1.1em;
+        padding: 10px 20px;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+
+      .header .btn:hover {
+        background-color: #e55d00;
+      }
+
+      /* Estilos de la sección de productos */
+
+      .productos {
+        padding: 80px 0;
+        background-color: #005f6b25;
+      }
+
+      .producto {
+        margin-bottom: 40px;
+        padding: 20px;
+      }
+
+      .producto img {
+        max-width: 100%;
+        height: auto;
+        height: 200px;
+        width: 200px;
+        margin-left: 50%;
+      }
+
+      .producto h3 {
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
+
+      .producto h5 {
+        font-size: 1.2em;
+        color: #666;
+      }
+
+      .producto .btn {
+        background-color: #f98030;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .producto .btn:hover {
+        background-color: rgb(204, 84, 4);
+      }
+
+      /* Estilos de la sección de contacto */
+
+      .contacto {
+        background-color: #f4f4f4;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .contacto form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contacto input,
+      .contacto textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+
+      .contacto .btn {
+        background-color: #008cba;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .contacto .btn:hover {
+        background-color: #005f6b;
+      }
+
+      /* Estilos del pie de página */
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="logo">
+        <img src="media/logo_1.png" alt="Logo de la tienda" class="logo" />
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" id="ini" href="paginaIndex/login.php"
+              ><strong>Iniciar</strong></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos"><strong>Productos</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto"><strong>Contacto</strong></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Encabezado con texto y diseño -->
+    <header id="home" class="header">
+      <div class="container">
+        <h1>Bienvenido a nuestra Tienda</h1>
+        <p>Explora nuestra amplia selección de celulares, accesorios y más.</p>
+        <a href="#productos" class="btn">Ver Productos</a>
+      </div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="productos">
+      <div class="container">
+        <h2>Nuestros Productos</h2>
+        <!-- Aquí irían los productos dinámicamente generados desde una base de datos -->
+        <div class="producto card">
+          <img src="media/producto2.jpg" alt="Producto 1" />
+          <h3>Xiaomi Mi Bro T1</h3>
+          <h5>Precio: $499.99</h5>
+          <a href="#" class="btn">Comprar</a>
+        </div>
+        <div class="producto card">
+          <img src="media/producto3.jpg" alt="Producto 2" />
+          <h3>Xiaomi Redmi Note 12 6 GB + 128 GB</h3>
+          <h5>Precio: $699.99</h5>
+          <a href="#" class="btn">Comprar</a>
+        </div>
+        <!-- Más productos aquí -->
+      </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas? Contáctanos hoy mismo.</p>
+        <form action="enviar.php" method="post">
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <textarea
+            name="mensaje"
+            placeholder="Tu mensaje"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Eduardo Poma. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
